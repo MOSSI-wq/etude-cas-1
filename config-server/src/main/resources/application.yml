@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MOSSI-wq/microservice-commandes
+          default-label: main
+  actuator:
+    endpoints:
+      web:
+        exposure:
+          include: "refresh"
+
+server:
+  port: 8882
+
+
+
